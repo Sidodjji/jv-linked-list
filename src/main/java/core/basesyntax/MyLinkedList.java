@@ -134,7 +134,7 @@ public class MyLinkedList<T> implements MyLinkedListInterface<T> {
     }
 
     private T unlink(Node<T> node) {
-        final T element = node.item;   // <-- FIX for style warning
+        final T element = node.item;
         Node<T> next = node.next;
         Node<T> prev = node.prev;
 
@@ -158,9 +158,9 @@ public class MyLinkedList<T> implements MyLinkedListInterface<T> {
     }
 
     private static class Node<T> {
-        T item;
-        Node<T> next;
-        Node<T> prev;
+        private T item;
+        private Node<T> next;
+        private Node<T> prev;
 
         Node(Node<T> prev, T item, Node<T> next) {
             this.item = item;
